@@ -1,22 +1,21 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/home.module.css'
 
-import Card, {CardLink} from '../components/card'
+import CardLink from '../components/cardlink'
+import Card from '../components/card'
 
 export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Card
-			title="Rackodo"
+			image="https://via.placeholder.com/150.png" />
+			<CardLink
 			image="/logo.jpg"
-			alt="Rackodo"
-			description="Description here."
-			>
-				<CardLink
-				text="Link 1"
-				image="https://via.placeholder.com/150/0000FF/000000"
-				/>
-			</Card>
+			text="Link 1"
+			href=""
+			alt="what"
+			/>
 		</div>
 	)
 }
