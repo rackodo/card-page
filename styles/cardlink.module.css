@@ -1,0 +1,62 @@
+.wrapper:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.container {
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.container::before {
+    background-color: var(--tertiary);
+    content: "before tag";
+    font-size: 0px;
+    position: absolute;
+    height: 48px;
+    border-radius: 48px;
+    width: 48px;
+    transition: none;
+}
+
+.container:hover::before {
+    width: 200px;
+    opacity: 0;
+
+    transition: all 0.5s;
+}
+
+.imageWrapper {
+    display: block;
+    flex: 48px;
+    padding: 7px;
+    margin: 0px;
+    border-radius: 100%;
+    background-color: var(--tertiary);
+}
+
+.imageWrapper span {
+    display: block!important;
+}
+
+.image {
+    display: block;
+    margin: 0px;
+    flex: 48px;
+    text-align: center;
+    transform: rotate(-20deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover .image {
+    transform: rotate(10deg);
+}
+
+.label {
+    display: block;
+    flex: calc(100% - 48px);
+    width: 100%;
+    padding-left: 10px;
+    z-index: 1;
+}
