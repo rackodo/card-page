@@ -5,11 +5,6 @@ import Card from '../components/card'
 import { useState } from 'react';
 
 export default function Home() {
-	if (typeof window !== "undefined") {
-		var slider = document.getElementById("slider");
-		var card = document.getElementById("card");
-	}
-
 	const [hue, setHue] = useState(180);
 
 	return (

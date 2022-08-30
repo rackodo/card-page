@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/card.module.css'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 import { createGlobalStyle } from 'styled-components'
 
@@ -35,9 +35,9 @@ export default function Card( {title, image, description, hue, children} ) {
 	)
 }
 
-Card.PropTypes = {
-	title: PropTypes.string.isRequired,
-	image: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	hue: PropTypes.number.isRequired
+Card.propTypes = {
+	title: propTypes.string.isRequired,
+	image: propTypes.string.isRequired,
+	description: propTypes.string.isRequired,
+	hue: propTypes.number.isRequired
 };
